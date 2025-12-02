@@ -16,9 +16,12 @@ if (isset($_SESSION['userId'])) {
         <div class="container">
             <form class="form-signin" action="login" method="POST">
                 <h3 class="form-signin-heading">Введите ваши данные</h3>
-                <input type="text" name="email" class="form-control" placeholder="Email" autofocus><!--required-->
-                <input type="password" name = "password" class="form-control" placeholder="Пароль"> <!--required-->
-                <button class="btn btn-lg btn-primary btn-block" type="submit" name="btnLogin">Войти</button>
+                <input type="text" name="email" class="form-control" placeholder=
+                "Email" autofocus><!--required-->
+                <input type="password" name = "password" class="form-control" 
+                placeholder="Пароль"> <!--required-->
+                <button class="btn btn-lg btn-primary btn-block" type="submit" name=
+                "btnLogin">Войти</button>
 
                 <p style="padding-top:10px;">
                     <?php
