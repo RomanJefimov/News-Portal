@@ -1,6 +1,6 @@
 <?php ob_start(); ?>
 
-<div class="container" style="mi-height:400px;">
+<div class="container" style="min-height:400px;">
 <div class="col-md-11">
     <h2>News Add </h2>
     <?php
@@ -48,7 +48,7 @@ else{
             </tr>
             <!-- image--> 
              <tr>
-                <td>Pictrue<td>
+                <td>Pictrue</td>
                     <td><div>
                         <input type=file name="picture" style="color:black;">
                     </div></td>

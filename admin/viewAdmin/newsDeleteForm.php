@@ -27,11 +27,11 @@
         ?>
         <form method='POST' action="newsDelResult?id=<?php echo $id; ?>" enctype=
         "multipart/form-data">
-        <table class='table table-corded'>
+        <table class='table table-bordered'>
             <tr>
                 <td>News title</td>
-                <td><input type='text' name='title' class='form-control' required value=<?php 
-                echo $detail['title']; ?> readonly></td>
+                <td><input type='text' name='title' class='form-control' required value="<?php 
+                echo $detail['title']; ?>" readonly></td>
             </tr>
             <tr>
                 <td>News text</td>
@@ -61,6 +61,16 @@
                     ).'" width=150 />'; ?>
                 </div></td>
             </tr>
+            <!-- end image--> 
+             <tr>
+                <td colspan="2">
+                    <button type="submit" class="btn btn-primary" name="save">
+                        <span class="glyphicon glyphicon-plus"></span> Удалить
+                    </button>
+                    <a href="newsAdmin" class="btn btn-large btn-success">
+                        <i class="glyphicon glyphicon-backward"></i>&nbsp;Назад к списку</a>
+                </td>
+             </tr>
         </table>
         </form>
         <?php
@@ -69,4 +79,4 @@
     </div>
 </div>
 <?php $content = ob_get_clean(); ?>
-<?php include "viewAdmin.templates/layout.php"; ?>
+<?php include "viewAdmin/templates/layout.php"; ?>

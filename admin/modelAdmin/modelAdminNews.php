@@ -23,8 +23,8 @@ class modelAdminNews{
                 //--------------images type blob
                     $image = addslashes (file_get_contents($_FILES['picture']['tmp_name']));
                 //-----------------------------------------
-                $sql="INSERT INTO `news` (`id`, `title`, `picture`, `category_id`,
-                 `user_id`) VALUES (NULL, '$title', '$text', '$image', '$idCategory', '1')";
+                $sql="INSERT INTO `news` (`id`, `title`, `text`, `picture`, `category_id`, `user_id`) 
+                VALUES (NULL, '$title', '$text', '$image', '$idCategory', '1')";
                         $db = new Database();
                         $item = $db->executeRun($sql);
                     if($item==true) {
@@ -36,8 +36,8 @@ class modelAdminNews{
     }
     //-----------------------------news detail id
     public static function getNewsDetail($id) {
-        $query = "SELECT news.*, category.name, users.username from news, category, users
-        WHERE news.category_id=category.id AND news.user_id=users_id and news.id=".$id;
+        $query = "SELECT news.*, category.name, users.username FROM news, category, users
+        WHERE news.category_id = category.id AND news.user_id = users.id AND news.id = ".$id;
         $db = new Database();
         $arr = $db->getOne($query);
         return $arr;
